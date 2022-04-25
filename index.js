@@ -69,5 +69,5 @@ const fetch = (msglimit, callback) => {
     }
 }
 module.exports.get = (limit, callback) => {
-    fetch(limit, callback)
+    return fetch(limit, callback)
 }
