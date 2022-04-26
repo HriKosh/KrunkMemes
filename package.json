@@ -1,6 +1,6 @@
 {
   "name": "krunkmemes",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "A Module to fetch Krunker Memes from r/KrunkerIO",
   "main": "index.js",
   "scripts": {
@@ -20,10 +20,10 @@
   "license": "MIT",
   "homepage": "https://github.com/BluZed/KrunkMemes#readme",
   "repository": {
-		"type": "git",
-		"url": "git+https://github.com/BluZed/KrunkMemes.git"
-	},
-	"bugs": {
-		"url": "https://github.com/BluZed/KrunkMemes/issues"
-	}
+    "type": "git",
+    "url": "git+https://github.com/BluZed/KrunkMemes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BluZed/KrunkMemes/issues"
+  }
 }

@@ -55,6 +55,8 @@ const fetch = (msglimit, callback) => {
                                 let thumb = data[i].data.thumbnail
                                 if (thumb.endsWith('.png') || thumb.endsWith('.jpg') || thumb.endsWith('.webp')) {
                                     memes.push(jsonMemeResponse(data[i], thumb))
+                                } else {
+                                    errors.push(data[i].data.permalink)
                                 }
                             }
                         }
@@ -69,5 +71,5 @@ const fetch = (msglimit, callback) => {
     }
 }
 module.exports.get = (limit, callback) => {
-    return fetch(limit, callback)
+    fetch(limit, callback)
 }
