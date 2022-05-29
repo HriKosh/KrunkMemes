@@ -1,6 +1,7 @@
 ﻿# KrunkMemes
 
 An API to fetch [Krunker](https://krunker.io/) Memes from [r/KrunkerIO](https://www.reddit.com/r/KrunkerIO).
+**STILL IN DEVELOPMENT / DOES NOT WORK AS INTENDED** 
 
 ## How To Use
 *First Install the package*:-
