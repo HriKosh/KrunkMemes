@@ -22,7 +22,7 @@ KrunkerMemes.get(postFilterLimit, (data)=>{
 ```
 _Here `postFilterLimit` is the amount of posts on [r/KrunkerIO](https://www.reddit.com/r/KrunkerIO) it should filter to find memes. By default, it is set to 100., Max is 100 and Min is 0._
 
-> Note: This api only works for the latest posts on [r/KrunkerIO](https://www.reddit.com/r/KrunkerIO), you probably won't get _that_ many memes using this. An updated > version would be made soon:tm:
+> Note: This api only works for the latest posts on [r/KrunkerIO](https://www.reddit.com/r/KrunkerIO), you probably won't get _that_ many memes using this. An updated version would be made soon:tm:
 
 ## Response Data
 *The Response Data is an [**Object**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object). The data is located inside the `data` key as an [**Array**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of the Response Object.*
