@@ -20,7 +20,7 @@ KrunkerMemes.get(postFilterLimit, (data)=>{
     console.log(data)
 })
 ```
-_Here `postFilterLimit` is the amount of posts on [r/KrunkerIO](https://www.reddit.com/r/KrunkerIO) it should filter to find memes. By default, it is set to 100., Max is 100 and Min is 0._
+_Here `postFilterLimit` is the amount of posts on [r/KrunkerIO](https://www.reddit.com/r/KrunkerIO) it should filter to find memes. By default, it is set to 100, Max is 100 and Min is 0._
 
 > Note: This api only works for the latest posts on [r/KrunkerIO](https://www.reddit.com/r/KrunkerIO), you probably won't get _that_ many memes using this. An updated version would be made soon:tm:
 
