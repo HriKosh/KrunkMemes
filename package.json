@@ -25,5 +25,8 @@
   },
   "bugs": {
     "url": "https://github.com/BluZed/KrunkMemes/issues"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.10"
   }
 }
