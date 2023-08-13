@@ -7,7 +7,6 @@ async function getmems(subreddit) {
     try {
         //fetch shit
         const response = await axios.get(`https://www.reddit.com/r/${subreddit}/search.json?q=flair_name%3A%22meme%22&restrict_sr=1&sort=hot`);
-        console.log("you suck dumbass")
 
         const memes = response.data.data.children;
 
