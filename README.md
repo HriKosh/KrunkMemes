@@ -1,4 +1,12 @@
 # KrunkMemes
-An API to fetch Krunker Memes from r/KrunkerIO
+An API to fetch Krunker Memes from `r/KrunkerIO`
 # Currently not working as expected
-i have used up all my interest in making this so no updates are currently planned :p
+I need to package the stuff, after that it should work
+
+when it does work this should be its usage:-
+
+```js
+const Memes = require('ModuleName')
+Memes.getMems('KrunkerIO') //console.log()s the stuff
+``` 
+
