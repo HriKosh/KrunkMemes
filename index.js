@@ -3,7 +3,7 @@
 const axios = require('axios/dist/node/axios.cjs');
 
 // meme getter
-async function fetchMemesFromSubreddit(subreddit) {
+async function getmems(subreddit) {
     try {
         //fetch shit
         const response = await axios.get(`https://www.reddit.com/r/${subreddit}/search.json?q=flair_name%3A%22meme%22&restrict_sr=1&sort=hot`);
@@ -25,4 +25,4 @@ async function fetchMemesFromSubreddit(subreddit) {
 }
 
 //call it with 'KrunkerIO' also works with other subreddits
-fetchMemesFromSubreddit('KrunkerIO');
+module.exports = getmems;
