@@ -1,0 +1,25 @@
+{
+  "name": "krunkmemes",
+  "version": "0.0.2",
+  "description": "An API which gets memes from the krunker subreddit",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HriKosh/KrunkMemes.git"
+  },
+  "keywords": [
+    "krunker"
+  ],
+  "author": "hrikesh_ and bluzed on discord",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HriKosh/KrunkMemes/issues"
+  },
+  "homepage": "https://github.com/HriKosh/KrunkMemes#readme",
+  "dependencies": {
+    "krunkmemes": "^1.0.3"
+  }
+}
