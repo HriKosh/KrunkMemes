@@ -6,7 +6,9 @@ const axios = require('axios/dist/node/axios.cjs');
 async function fetchMemesFromSubreddit(subreddit) {
     try {
         //fetch shit
-        const response = await axios.get(`https://www.reddit.com/r/${subreddit}/top.json?limit=10&t`);
+        const response = await axios.get(`https://www.reddit.com/r/${subreddit}/search.json?q=flair_name%3A%22meme%22&restrict_sr=1&sort=hot`);
+        console.log("you suck dumbass")
+
         const memes = response.data.data.children;
 
         // process/display da funny pics
