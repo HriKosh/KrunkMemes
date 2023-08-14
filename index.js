@@ -1,27 +1,47 @@
-//install this package without running
-//TODO: make it so that when installing this api it installs axios as well
-const axios = require('axios/dist/node/axios.cjs');
+const https = require('https');
 
-// meme getter
-async function getmems(subreddit) {
-    try {
-        //fetch shit
-        const response = await axios.get(`https://www.reddit.com/r/${subreddit}/search.json?q=flair_name%3A%22meme%22&restrict_sr=1&sort=hot`);
+function getmems(callback) {
+  const Memes = [];
+  const URL = [];
 
-        const memes = response.data.data.children;
+  const options = {
+    hostname: 'www.reddit.com',
+    path: `/r/KrunkerIO/search.json?q=flair_name%3A%22meme%22&restrict_sr=1&sort=new`,
+    method: 'GET',
+    headers: {
+      'User-Agent': 'Mozilla/5.0',
+    },
+  };
 
-        // process/display da funny pics
-        memes.forEach((meme, index) => {
-            const memeData = meme.data;
-            console.log(`Meme ${index + 1}: ${memeData.title}`);
-            console.log(`URL: ${memeData.url}`);
-            console.log('---');
-        });
-    } catch (error) {
-        //try catch my love
-        console.error('Error fetching memes:', error);
-    }
+  const req = https.request(options, (res) => {
+    let data = '';
+
+    res.on('data', (chunk) => {
+      data += chunk;
+    });
+
+    res.on('end', () => {
+      const response = JSON.parse(data);
+
+      const memes = response.data.children;
+      memes.forEach((meme, index) => {
+        const memeData = meme.data;
+        if (memeData.url && memeData.url.includes('.jpg' || '.png' || '.jpeg' || 'webp')) {
+          Memes.push(`Meme: ${memeData.title}`);
+          URL.push(`URL: ${memeData.url}`);
+        }
+      });
+
+      callback(Memes, URL);
+    });
+  });
+
+  req.on('error', (error) => {
+    console.error('Error meme-ing:', error);
+  });
+
+  req.end();
 }
 
-//call it with 'KrunkerIO' also works with other subreddits
+
 module.exports = getmems;
